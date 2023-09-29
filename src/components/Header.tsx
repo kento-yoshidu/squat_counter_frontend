@@ -20,7 +20,7 @@ function Header() {
   }
 
   return (
-    <div>
+    <div style={{ border: "1px soli red" }}>
       <h2>ユーザ一覧</h2>
       <div>
         {data.map((count: Count) => (
