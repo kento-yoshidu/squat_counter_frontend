@@ -20,15 +20,15 @@ function Header() {
   }
 
   return (
-    <div style={{ border: "1px soli red" }}>
+    <div>
       <h2>ユーザ一覧</h2>
       <div>
         {data.map((count: Count) => (
           <div key={count.id}>
-            <p>id: {count.id}</p>
             <p>date: {count.date}</p>
             <p>count: {count.count}</p>
             <p>username: {count.user_name}</p>
+            <p>---------------------------------------</p>
           </div>
         ))}
       </div>

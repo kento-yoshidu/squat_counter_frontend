@@ -1,12 +1,16 @@
-import Image from 'next/image'
-
 import Header from '@/components/Header'
+import Today from '@/components/Today'
 
 export default function Home() {
   return (
-    <main style={{ height: "100vh", border: "1px solid red" }}>
+    <main>
       <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-        <h1>自重スクワットカウンター</h1>
+        <h1>Squat Counter</h1>
+
+        <Today />
+
+        <h2>過去の履歴</h2>
+
         <Header />
       </div>
     </main>
