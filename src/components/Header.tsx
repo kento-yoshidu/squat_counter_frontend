@@ -2,9 +2,13 @@
 
 import { Count } from '@/types/type'
 import { useQuery } from 'react-query'
+import DisplayCount from './DisplayCount'
 
 const fetchUsers = async () => {
   const res = await fetch('http://localhost:8080/fetch/count')
+
+  console.log(res)
+
   return res.json();
 }
 
@@ -20,16 +24,15 @@ function Header() {
   }
 
   return (
-    <div style={{ border: "1px soli red" }}>
-      <h2>ユーザ一覧</h2>
+    <div>
       <div>
         {data.map((count: Count) => (
-          <div key={count.id}>
-            <p>id: {count.id}</p>
-            <p>date: {count.date}</p>
-            <p>count: {count.count}</p>
-            <p>username: {count.user_name}</p>
-          </div>
+          <DisplayCount
+            key={count.id}
+            date={count.date}
+            count={count.count}
+            userName={count.user_name}
+          />
         ))}
       </div>
     </div>
